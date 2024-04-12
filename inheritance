@@ -1,0 +1,21 @@
+class Vehicle:
+    def __init__(self,wheels,shape,color,size):
+        self.wheels=wheels
+        self.shape=shape
+        self.color=color
+        self.size=size
+
+class Car(Vehicle):
+    def __init__(self,wheels,shape,color,size,doors,fueltype):
+        Vehicle.__init__(self,wheels,shape,color,size)
+        self.doors=doors
+        self.fueltype=fueltype
+
+car1= Car(4,"rectangle","black",(100,90),4,"electric")
+print (car1.wheels)
+print (car1.shape)
+print (car1.color)
+print (car1.size)
+print (car1.doors)
+print (car1.fueltype)
+
