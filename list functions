@@ -1,0 +1,42 @@
+#creating a list
+dog=["hound","golden retriver","labrator retriver","vizla"]
+
+print(dog)
+
+# lenth of list
+
+print(len(dog))
+
+#indexing
+
+print(dog[1])
+
+# adding items to the list
+
+dog.append("chihuahua")
+
+print(dog)
+
+# insert
+
+dog.insert(1,"greyhound")
+
+print(dog)
+
+#remove
+dog.remove("chihuahua")
+
+print(dog)
+
+#revomin with index
+
+#del dog[10]
+
+#presence of item
+
+print("chihuahua" in dog )
+print("chihuahua" not in dog )
+
+#retrive each item
+for d in dog:
+    print (d)
