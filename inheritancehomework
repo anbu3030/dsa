@@ -1,0 +1,25 @@
+class wolf:
+    def __init__(self,color,size):
+        self.color=color
+        self.size=size
+
+    def houl(self):
+        print("houl")
+
+
+class dog(wolf):
+
+    def __init__(self,color,size,mood):
+        wolf.__init__(self,color,size)
+        self.mood=mood
+
+    def houl(self):
+        print("houl")
+
+
+
+dog1= dog("black","big","happy")
+print (dog1.color)
+print (dog1.size)
+print (dog1.mood)
+dog1.houl()
