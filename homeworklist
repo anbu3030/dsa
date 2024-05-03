@@ -1,0 +1,20 @@
+import random 
+
+list=[]
+lista=[]
+listb=[]
+for i in range(20): 
+    n=random.randint(40,100) 
+    list.append(n)
+for l in list:
+    if l>60:
+        lista.append(l)
+
+    else:
+        listb.append(l)
+
+print(list)
+
+print(lista)
+
+print(listb)
