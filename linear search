@@ -1,0 +1,29 @@
+import random
+search=[]
+
+for i in range(20): 
+    n=random.randint(0,10) 
+    search.append(n)
+
+r=int(input("which number do you want to search"))
+
+"""for s in search:
+    print(s,r)
+    if s==r:
+        print("found")
+        break
+    
+    else:
+        print("no value detected")"""
+len=len(search)
+found=False
+for l in range(len):
+    print(l,r)
+    if search[l]==r:
+        print("found at",l)
+        found=True
+        break
+    
+if found is not True:
+    print ("not found")
+print(search)
