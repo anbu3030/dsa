@@ -1,0 +1,18 @@
+num=[1,2,4,6,12,13]
+inp=int(input("which number do you want to find"))
+
+start=0
+end=len(num)-1
+
+while start <= end:
+    mid=(start+end)//2
+
+    if num[mid]==inp:
+        print("input found")
+        break
+
+    elif num[mid]<inp:
+        start=mid+1
+
+    else:
+        end=mid-1
