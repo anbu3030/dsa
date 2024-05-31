@@ -3,11 +3,13 @@ inp=int(input("which number do you want to find"))
 
 start=0
 end=len(num)-1
+found=False
 
 while start <= end:
     mid=(start+end)//2
 
     if num[mid]==inp:
+        found=True
         print("input found")
         break
 
@@ -16,3 +18,5 @@ while start <= end:
 
     else:
         end=mid-1
+if found==False:
+    print("input not found")
