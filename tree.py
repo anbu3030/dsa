@@ -20,6 +20,15 @@ def preordertraversal(root):
     if root.right is not None:
         preordertraversal(root.right)
 
+def postordertraversal(root):
+   
+    if root.left is not None:
+        postordertraversal(root.left)
+
+    if root.right is not None:
+        postordertraversal(root.right)
+    print(root.key)
+
 root=Node(1)
 root.left=Node(2)
 root.right=Node(3)
@@ -28,4 +37,7 @@ root.left.right=Node(5)
 root.right.left=Node(6)
 root.right.right=Node(7)
 inordertraversal(root)
+print("preordertraversal")
 preordertraversal(root)
+print("postordertraversal")
+postordertraversal(root)
