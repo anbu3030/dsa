@@ -47,14 +47,36 @@ def search(root,sea):
     
     else:
         return False
-
-        
     
+def inordersuccessor(root):
+    succes=root.right
+    while succes.left is not None:
+        succes=succes.left
+    return succes 
 
+def delete(root,tup):
+    if root is None: 
+        return root
+    if tup < root.key:
+        root.left=delete(root.left,tup)
 
+    elif tup > root.key:
+        root.right=delete(root.right,tup)
 
+    else:
+        if root.right is None:
+          return root.left
+        
+        if root.left is None:
+          return root.right
+        
+        c=inordersuccessor(root)
+        root.key=c.key
+        root.right=delete(root.right,c.key)
+
+    return root
 def menu():
-    m=int(input("1=inordertraversal\n2=preordertraversal\n3=postordertraversal"))
+    m=int(input("1=inordertraversal\n2=preordertraversal\n3=postordertraversal\n4=search"))
     if m==1:
         print(inordertraversal(tree))
     
@@ -63,11 +85,14 @@ def menu():
 
     if m==3:
         print(postordertraversal(tree))
+    
+    if m==4:
+        z=int(input("what number are you searching for"))
+        print(search(tree,z))
 
         
 tree=None
-for i in range(12):
+for i in range(6):
     ini=int(input("insert a new value"))
     tree=insert(tree,ini)
-#menu()
-print(search(tree,11))
+menu()
