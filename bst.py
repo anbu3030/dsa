@@ -76,21 +76,28 @@ def delete(root,tup):
 
     return root
 def menu():
-    m=int(input("1=inordertraversal\n2=preordertraversal\n3=postordertraversal\n4=search"))
-    if m==1:
-        print(inordertraversal(tree))
-    
-    if m==2:
-        print(preordertraversal(tree))
-
-    if m==3:
-        print(postordertraversal(tree))
-    
-    if m==4:
-        z=int(input("what number are you searching for"))
-        print(search(tree,z))
-
+    while True:
+        m=int(input("1=inordertraversal\n2=preordertraversal\n3=postordertraversal\n4=search\n5=delete\n6=stop program"))
+        if m==1:
+            inordertraversal(tree)
         
+        elif m==2:
+            preordertraversal(tree)
+
+        elif m==3:
+            postordertraversal(tree)
+        
+        elif m==4:
+            z=int(input("what number are you searching for"))
+            search(tree,z)
+
+        elif m==5:
+            y=int(input("which item do you want to delete"))
+            delete(tree,y)
+
+        else:
+            break
+    
 tree=None
 for i in range(6):
     ini=int(input("insert a new value"))
